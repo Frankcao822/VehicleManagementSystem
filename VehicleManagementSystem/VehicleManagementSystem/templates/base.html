@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vehicle Management System</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Vehicle Management System</h1>
+        <p>
+          <a href="{{ url_for('home')}}">Home</a> |
+          <a href="{{ url_for('read')}}">Get Data</a> |
+          <a href="{{ url_for('create')}}">Add Data</a>
+        </p>
+      </header>
+      <main>{% block container %} {% endblock %}</main>
+      <footer>
+        <p>
+          Thanks for using this System!
+          <!-- The source code for this example app is
+          <a href="https://github.com/nyu-database-design/flask-mongodb-example"
+            >available on Github</a
+          >. -->
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
